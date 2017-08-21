@@ -1,0 +1,50 @@
+a:hover{
+    font-weight: bolder;
+    text-decoration: none;
+    color: #ffffff !important;
+
+}
+
+.logo{
+    width:40px;
+    margin-top:0.35em;
+    margin-left:2em;
+}
+
+.dropdown-menu>li>a:hover{
+    background-color: #2E2E2E;
+    font-weight: bolder;
+}
+
+.alphaBox{
+    border: none;
+    background-color: lightgray;
+    opacity: 0.75;
+    padding: 2em;
+}
+
+.padding{
+    padding:0.1em;
+}
+
+.imgSize{
+    width: 200px;
+    height: 500px;
+}
+.txt-size{
+    font-size: 120%;
+}
+
+.panelBorder{
+    border: groove;
+    padding: 2em;
+}
+
+.center{
+    align-content: center;
+}
+
+.elementPadding{
+    padding: 1.5em;
+}
+
