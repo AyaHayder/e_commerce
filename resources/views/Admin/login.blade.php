@@ -3,7 +3,8 @@
 @section('title')
     Admin Login
 @endsection
-section('link1')
+
+@section('link1')
 {{Route('dashboard')}}
 @endsection
 
