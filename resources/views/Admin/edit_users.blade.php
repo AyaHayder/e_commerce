@@ -45,8 +45,8 @@
                     <tr>
                         <td class="text-center  elementPadding">{{$user->id}}</td>
                         <td class="text-center  elementPadding">{{$user->name}}</td>
-                        <td class="text-center  elementPadding">{{$user->email}}$</td>
-                        <td class="text-center  elementPadding">{{$user->cart->id}}</td>
+                        <td class="text-center  elementPadding">{{$user->email}}</td>
+                        <td class="text-center  elementPadding">{{$user->cart->name}}</td>
                         <td class="text-center  elementPadding">
                             @foreach($user->cart->item as $item)
                                 <ul>
@@ -58,7 +58,11 @@
                                 </ul>
                             @endforeach
                         </td>
-                        <td></td>
+                        <td>
+                            @foreach($user->cart->order as $order)
+                                <li>{{$order->name}}</li>
+                            @endforeach
+                        </td>
                         <td class="text-center  elementPadding">
                             <a href="/admin/make/admin/{{$user->id}}" style="color:black !important;">make admin</a><br><br>
                             <a href="/admin/delete/user/{{$user->id}}" style="color:black !important;">delete</a> </td>

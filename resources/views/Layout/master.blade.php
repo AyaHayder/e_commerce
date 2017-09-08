@@ -11,8 +11,7 @@
 
     <link rel="stylesheet" href="{{ url('/css/main.css') }}">
 </head>
-<body style="background-image:url('/../../images/E-commerce Packaging.jpg');
-      background-size: cover;">
+<body>
 
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">

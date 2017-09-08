@@ -62,8 +62,8 @@ class ItemController extends Controller
     //1.
     public function getDashboard()
     {
-        $category=Category::paginate(6);
-        $items =Item::paginate(6);
+        $category=Category::paginate(3);
+        $items =Item::paginate(3);
         $user=Auth::user();
         return view('user.view_item',compact('items','category','user'));
     }
@@ -71,7 +71,7 @@ class ItemController extends Controller
     //2.
     public function sortByPrice()
     {
-        $items = Item::orderBy('price')->paginate(6);
+        $items = Item::orderBy('price')->paginate(3);
         $link ="/user/dashboard";
         $linkName="Normal view";
         $user=Auth::user();

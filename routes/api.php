@@ -15,8 +15,10 @@ use Illuminate\Http\Request;
 
 Route::group(['prefix'=>'v1','namespace'=>'\Api\V1'],function () {
 
-    Route::get('users','UserController@getUsers')->middleware('jwt.token');
+
     Route::post('/user/login','UserController@login');
     Route::post('/user/register','UserController@register');
-
+    Route::group(['middleware'=>'jwt.token'],function (){
+        Route::get('orders','UserController@getOrders');
+    });
 });

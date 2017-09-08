@@ -13,6 +13,7 @@ use Session;
 use function Sodium\crypto_box_publickey_from_secretkey;
 use Validator;
 use DB;
+use App\Cart;
 class AdminController extends Controller
 {
     /*
@@ -279,7 +280,8 @@ class AdminController extends Controller
     {
         $loggedUser=Auth::user();
         $users = User::paginate(10);
-        return view('admin.edit_users',compact('users','loggedUser'));
+        $cart = Cart::paginate(10);
+        return view('admin.edit_users',compact('users','loggedUser','cart'));
     }
 
     //16.

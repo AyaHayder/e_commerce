@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Validator;
 use JWTAuth;
+use App\Order;
 use Tymon\JWTAuth\Exceptions\JWTException;
 
 
@@ -73,6 +74,7 @@ class UserController extends Controller
 
         $user =new User;
         $user->first_name = $request->first_name;
+        $user->last_name = $request->last_name;
         $user->password =bcrypt($request->password);
         $user->email = $request->email;
         $user->save();
@@ -98,5 +100,14 @@ class UserController extends Controller
         // all good so return the token
         return response()->json(compact('user'));
 
+    }
+
+    public function getOrders()
+    {
+        $orders =Order::all();
+        return response()->json([
+            'orders'=>$orders,
+            ],
+            true);
     }
 }

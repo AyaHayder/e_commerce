@@ -66,6 +66,10 @@ class OrderController extends Controller
             Session::flash('message','You have successfully placed an order');
             return redirect('/user/view_profile');
         }
+        else{
+            Session::flash('message','the order must have an existing item!');
+            return back();
+        }
 
     }
 }

@@ -31,13 +31,13 @@
                 @if(Session::has('message'))
                     <div class="alert alert-info">{{ Session::get('message') }}</div>
                 @endif
-                <form action="{{Route('admin.addUser')}}" method="post">
+                <form action="{{Route('admin.addItem')}}" method="post">
                     {{csrf_field()}}
                     <h1 class="text-center">Add Item</h1>
                     <div class="form-group">
-                        <label>First name</label>
-                        <input type="text" name="name" class="form-control" placeholder="First Name"><br>
-                        <label>Last name</label>
+                        <label>Item name</label>
+                        <input type="text" name="name" class="form-control" placeholder="type the name"><br>
+                        <label>Price</label>
                         <input type="text" name="price" class="form-control" placeholder="type the price"><br>
                         <label>Category</label>
                         <input type="text" name="cat" class="form-control" placeholder="category name"><br>
